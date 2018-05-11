@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form @submit.prevent="submit">
+    <form @submit.prevent="submit" @reset.prevent="reset">
       <div class="form-group row">
         <label for="title" class="col-4 col-form-label">Post title</label> 
         <div class="col-8">
@@ -52,7 +52,23 @@ export default {
   },
   methods: {
     submit() {
-      posts.add(this.post).then(() => this.$router.push("/posts"));
+      if (this.$route.params.id) {
+        posts
+          .edit(this.$route.params.id, this.post)
+          .then(() => this.$router.push("/posts"));
+      } else {
+        posts.add(this.post).then(() => this.$router.push("/posts"));
+      }
+    },
+    reset() {
+      this.post = {};
+    }
+  },
+  created() {
+    if (this.$route.params.id) {
+      posts.get(this.$route.params.id).then(response => {
+        this.post = response.data;
+      });
     }
   }
 };
