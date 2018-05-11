@@ -9,7 +9,9 @@
             placeholder="Enter post title" 
             type="text" 
             class="form-control here"
-            v-model="post.title">
+            v-model="post.title"
+            minlength="2"
+            required>
         </div>
       </div>
   <div class="form-group row">
@@ -18,9 +20,11 @@
       <textarea id="text" 
         name="text" 
         cols="40" 
-        rows="8" 
+        rows="4" 
         class="form-control"
-        v-model="post.text">
+        v-model="post.text"
+        maxlength="300"
+        required>
       </textarea>
     </div>
   </div> 
