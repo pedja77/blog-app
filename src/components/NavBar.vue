@@ -6,6 +6,9 @@
         <div class="navbar-nav">
           <router-link class="nav-item nav-link" :to="{name: 'posts'}">Posts</router-link>
         </div>
+         <div class="navbar-nav">
+          <router-link class="nav-item nav-link" :to="{name: 'add'}">Add</router-link>
+        </div>
       </div>
     </nav>
   </div>
