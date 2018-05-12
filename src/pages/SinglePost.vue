@@ -2,7 +2,7 @@
   <div>
       <h3>{{ post.title }}</h3>
       <p>{{ post.text }}</p>
-      <time-stamps :created="post.createdAt"></time-stamps>
+      <time-stamps :created="post.createdAt" class="text-right"></time-stamps>
       <add-comment @comment-added="refreshPost"></add-comment>
       <comments-list :comments="post.comments"></comments-list>
   </div>

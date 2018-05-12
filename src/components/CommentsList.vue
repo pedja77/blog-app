@@ -6,7 +6,7 @@
             <p>
                 {{ comment.text}}
             </p>
-            <time-stamps :created="comment.createdAt"></time-stamps>
+            <time-stamps :created="comment.createdAt" class="text-right"></time-stamps>
         </li>
     </ul>
 </div>

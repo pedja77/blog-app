@@ -1,9 +1,11 @@
 <template>
   <div>
-      <p class="text-right mt-0">
+      <p>
         <em>
+          <small>
             Created at {{ created | formatDate(dateFormat) }}, 
             {{ created | diffForHumans }} ago.
+          </small>
         </em>
       </p>
   </div>
