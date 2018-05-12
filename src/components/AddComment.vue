@@ -1,17 +1,7 @@
 <template>
   <div class="container mt-8">
+    <h4>Add comment</h4>
     <form @submit.prevent="submitComment">
-    <div class="form-group row">
-      <label for="username" class="col-4 col-form-label">Username</label> 
-      <div class="col-8">
-        <input id="username" 
-          name="username" 
-          placeholder="Enter your username" 
-          type="text" 
-          class="form-control here"
-          required>
-      </div>
-    </div>
     <div class="form-group row">
       <label for="text" class="col-4 col-form-label">Comment</label> 
       <div class="col-8">
@@ -21,6 +11,7 @@
           cols="40" 
           rows="4" 
           class="form-control"
+          v-model="comment.text"
           required>
         </textarea>
       </div>
@@ -35,14 +26,21 @@
 </template>
 
 <script>
+import { posts } from '../services/Posts'
+
 export default {
     data() {
         return {
-            
+            comment: {
+              text: ''
+            }
         }
     },
     methods: {
-
+      submitComment() {
+        posts.addComment(this.comment, this.$route.params.id)
+          .then(() => this.$emit('comment-added'))
+      }
     }
 
 }

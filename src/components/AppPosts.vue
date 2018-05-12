@@ -2,7 +2,7 @@
   <div>
     <ul class="list-unstyled">
       <li v-for="post in posts" :key="post.id" class="list-item">
-        {{ post.title }}
+        {{ post.title }} <small><em>with {{ post.comments.length }} comments</em></small>
         <router-link 
           class="btn  btn-link" 
           :to="{name: 'edit-post', params: {id: post.id}}">
