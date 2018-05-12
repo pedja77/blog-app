@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import AppPosts from './components/AppPosts.vue'
-import SinglePost from './components/SinglePost.vue'
-import AddPost from './components/AddPost.vue'
+import AppPosts from './pages/AppPosts.vue'
+import SinglePost from './pages/SinglePost.vue'
+import AddPost from './pages/AddPost.vue'
 
 
 Vue.use(VueRouter)

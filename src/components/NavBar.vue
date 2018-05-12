@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">ViBlog</a>
+      <a class="navbar-brand" href="#">Vivify Blog</a>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <router-link class="nav-item nav-link" :to="{name: 'posts'}">Posts</router-link>

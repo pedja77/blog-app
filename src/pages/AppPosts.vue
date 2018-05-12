@@ -27,7 +27,7 @@
 
 <script>
 import { posts } from "../services/Posts";
-import TimeStamps from './TimeStamps'
+import TimeStamps from '../components/TimeStamps'
 
 export default {
   components: {

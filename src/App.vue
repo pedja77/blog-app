@@ -7,7 +7,7 @@
 
 <script>
 import NavBar from './components/NavBar.vue'
-import AppPosts from './components/AppPosts.vue'
+import AppPosts from './pages/AppPosts.vue'
 
 export default {
   name: 'app',
