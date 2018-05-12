@@ -19,6 +19,7 @@
           :to="{name: 'single-post', params: {id: post.id}}">
             <small>Read more ...</small>
         </router-link>
+        <time-stamps :created="post.createdAt"></time-stamps>
       </li>
     </ul>
   </div>
@@ -26,8 +27,12 @@
 
 <script>
 import { posts } from "../services/Posts";
+import TimeStamps from './TimeStamps'
 
 export default {
+  components: {
+    TimeStamps
+  },
   data() {
     return {
       posts: []

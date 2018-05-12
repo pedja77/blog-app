@@ -6,7 +6,7 @@
             <p>
                 {{ comment.text}}
             </p>
-             <p class="text-right mt-0">created at {{ comment.createdAt }}</p>
+            <time-stamps :created="comment.createdAt"></time-stamps>
         </li>
     </ul>
 </div>
@@ -14,14 +14,13 @@
 </template>
 
 <script>
+import TimeStamps from './TimeStamps'
+
 export default {
-    props: ['comments'],
-    created() {
-        console.log(this.comments)
-    }
-}
+  props: ["comments"],
+  components: {
+      TimeStamps
+  }
+};
 </script>
 
-<style>
-
-</style>
