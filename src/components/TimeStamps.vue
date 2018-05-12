@@ -14,7 +14,7 @@
 <script>
 import { dateMixin } from "../mixins/DateMixin";
 
-const DATE_FORMAT_STRING = "dddd, MMMM Do YYYY, hh:mm:ss";
+const DATE_FORMAT_STRING = "dddd, MMMM Do YYYY, HH:mm:ss";
 
 export default {
   mixins: [dateMixin],
